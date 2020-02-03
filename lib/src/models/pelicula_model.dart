@@ -20,6 +20,9 @@ class Peliculas {
 }
 
 class Pelicula {
+
+  String uniqueId;
+
   double popularity;
   int voteCount;
   bool video;
@@ -77,6 +80,16 @@ class Pelicula {
       return 'https://insidelatinamerica.net/wp-content/uploads/2018/01/noImg_2.jpg';
     } else {
       return 'https://image.tmdb.org/t/p/w500/$posterPath';
+    }
+
+  }
+
+  getBackgroundImg() {
+
+    if ( posterPath == null ) {
+      return 'https://insidelatinamerica.net/wp-content/uploads/2018/01/noImg_2.jpg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$backdropPath';
     }
 
   }
